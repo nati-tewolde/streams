@@ -22,7 +22,7 @@ public class Program {
             }
         }
 
-        System.out.println("Matching people" + matchingPeople);
+        System.out.println("Matching people: " + matchingPeople);
         System.out.println("\nAverage age: " + getAverageAge(getPeopleList()));
         System.out.println("Oldest age: " + getOldestPerson(getPeopleList()));
         System.out.println("Youngest age: " + getYoungestPerson(getPeopleList()));
