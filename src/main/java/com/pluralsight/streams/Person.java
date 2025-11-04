@@ -14,31 +14,23 @@ public class Person {
         this.age = age;
     }
 
-    public static double getAverageAge(List<Person> people) {
-        double averageAge = 0;
-        for (Person person : people) {
-            averageAge += person.age;
-        }
-        return averageAge / people.size();
+    public String getFirstName() {
+        return firstName;
     }
 
-    public static int getOldestPerson(List<Person> people) {
-        int oldestAge = people.get(0).age;
-        for (Person person : people) {
-            if (person.age >= oldestAge) {
-                oldestAge = person.age;
-            }
-        }
-        return oldestAge;
+    public String getLastName() {
+        return lastName;
     }
 
-    public static int getYoungestPerson(List<Person> people) {
-        int youngestAge = people.get(0).age;
-        for (Person person : people) {
-            if (person.age <= youngestAge) {
-                youngestAge = person.age;
-            }
-        }
-        return youngestAge;
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "FirstName: " + firstName +
+                ", lastName: " + lastName +
+                ", age: " + age;
     }
 }
+
