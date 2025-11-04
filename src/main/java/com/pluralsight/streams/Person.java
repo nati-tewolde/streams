@@ -8,16 +8,13 @@ public class Person {
     private String lastName;
     private int age;
 
-    private List<Person> people;
-
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.people = new ArrayList<>();
     }
 
-    public double getAverageAge(List<Person> people) {
+    public static double getAverageAge(List<Person> people) {
         double averageAge = 0;
         for (Person person : people) {
             averageAge += person.age;
@@ -25,8 +22,8 @@ public class Person {
         return averageAge / people.size();
     }
 
-    public int getOldestPerson(List<Person> people) {
-        int oldestAge = 0;
+    public static int getOldestPerson(List<Person> people) {
+        int oldestAge = people.get(0).age;
         for (Person person : people) {
             if (person.age >= oldestAge) {
                 oldestAge = person.age;
@@ -35,8 +32,8 @@ public class Person {
         return oldestAge;
     }
 
-    public int getYoungestPerson(List<Person> people) {
-        int youngestAge = 0;
+    public static int getYoungestPerson(List<Person> people) {
+        int youngestAge = people.get(0).age;
         for (Person person : people) {
             if (person.age <= youngestAge) {
                 youngestAge = person.age;
